@@ -16,7 +16,7 @@ A simple task api as a backend assessment.
 
 ## Installation
 
-Clone the repository from [GitHub Repo URL].
+Clone the repository from https://github.com/tahirawan077/Tasks-Backend.git.
 Run npm install to install the project dependencies.
 
 ## Configuration
@@ -28,7 +28,7 @@ SECRET=your-secret-key
 ## Usage
 
 Run the application locally using npm run dev.
-Access the API at http://localhost:PORT, where PORT is the port number specified in your environment file.
+Access the API at http://localhost:5000
 
 ## API Endpoints
 
