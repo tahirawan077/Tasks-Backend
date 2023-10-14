@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "c6e5e584-0931-4daa-8751-fb1241e8315c",
+		"name": "Tasks api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13354368"
+	},
+	"item": [
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"New Task\",\r\n    \"description\": \"This is a new Task\",\r\n    \"dueDate\": \"2023-11-25 16:00:43.947\",\r\n    \"assignedTo\": \"tahir\",\r\n    \"category\": \"Home\",\r\n    \"status\": \"Pending\",\r\n    \"creationDate\": \"2023-10-12T23:53:01.352Z\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/task/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tasks",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/tasks?limit=2&offset=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "2"
+								},
+								{
+									"key": "offset",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all tasks Copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/task/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tasks By catergory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/tasks?category=Home",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Home"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tasks By Assignedto",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/tasks?assignedTo=tahir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tasks"
+							],
+							"query": [
+								{
+									"key": "assignedTo",
+									"value": "tahir"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get task by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/task/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create task",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjk3MTAzMTk0fQ.UJV2rro3nu9om0Wpp452K88lEL4N0MI5XhXzUTHog_c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"New Task\",\r\n  \"description\": \"This is a new Task\",\r\n  \"dueDate\": \"2023-11-25 16:00:43.947\",\r\n  \"assignedTo\": \"tahir\",\r\n  \"category\": \"Home\",\r\n  \"status\":\"Pending\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/task",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"xyz\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"xyz\",\r\n    \"password\" : \"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
