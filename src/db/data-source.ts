@@ -9,7 +9,7 @@ const DevAppDataSource = new DataSource({
     host: 'otto.db.elephantsql.com',
     port: 5432,
     username: "mtakoaoy",
-    password: "4jlloWFY0tgr1bTXdSUSOiVBA4hWmYKx",
+    password: "",
     database: "mtakoaoy",
     entities: [Task, User],
     synchronize: true,
